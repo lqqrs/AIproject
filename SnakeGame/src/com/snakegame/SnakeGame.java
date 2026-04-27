@@ -88,6 +88,7 @@ public class SnakeGame extends JPanel implements KeyListener, ActionListener {
         g.setColor(Color.WHITE);
         g.setFont(new Font("Arial", Font.BOLD, 20));
         g.drawString("Score: " + score, 10, 30);
+        g.drawString("按 R 键重启", 10, 55);
         
         if (isGameOver) {
             g.setColor(Color.RED);
@@ -98,7 +99,7 @@ public class SnakeGame extends JPanel implements KeyListener, ActionListener {
             int y = getHeight() / 2;
             g.drawString(msg, x, y);
             g.setFont(new Font("Arial", Font.BOLD, 20));
-            g.drawString("Press R to Restart", x + 30, y + 40);
+            g.drawString("按 R 键重启", x + 50, y + 40);
         }
         
         if (isPaused && !isGameOver) {
@@ -157,7 +158,7 @@ public class SnakeGame extends JPanel implements KeyListener, ActionListener {
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
         
-        if (key == KeyEvent.VK_R && isGameOver) {
+        if (key == KeyEvent.VK_R) {
             resetGame();
             return;
         }
