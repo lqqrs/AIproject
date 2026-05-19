@@ -88,7 +88,7 @@ public class SnakeGame extends JPanel implements KeyListener, ActionListener {
         g.setColor(Color.WHITE);
         g.setFont(new Font("Arial", Font.BOLD, 20));
         g.drawString("Score: " + score, 10, 30);
-        g.drawString("按 R 键重启", 10, 55);
+        g.drawString("按 R 键重启:", 10, 55);
         
         if (isGameOver) {
             g.setColor(Color.RED);
