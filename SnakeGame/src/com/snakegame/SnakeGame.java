@@ -99,7 +99,7 @@ public class SnakeGame extends JPanel implements KeyListener, ActionListener {
             int y = getHeight() / 2;
             g.drawString(msg, x, y);
             g.setFont(new Font("Arial", Font.BOLD, 20));
-            g.drawString("按 R 键重启", x + 50, y + 40);
+            g.drawString("按 R 键重启:", x + 50, y + 40);
         }
         
         if (isPaused && !isGameOver) {
